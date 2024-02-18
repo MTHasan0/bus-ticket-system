@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,36 +8,65 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="https://kit.fontawesome.com/9e11ff2866.js" crossorigin="anonymous"></script>
+
 </head>
+
 <body class="min-w-svh">
     <section class="lg:w-[1171px] mt-5 m-auto">
-        <div class="navbar bg-base-100">
+
+        <div class="navbar-start justify-between flex lg:hidden">
+            <a class="text-xl">P-Ticket</a>
+            <div class="dropdown">
+                <div class="flex items-center">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle lg:hidden">
+                        <i class="fa-solid fa-bars-staggered fa-lg"></i>
+                    </div>
+
+                </div>
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a class="text-red-500">Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Search</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="navbar bg-base-100 hidden lg:flex">
             <div class="navbar-start">
-              <a class="btn text-xl">P-Ticket</a>
+                <a class="text-xl">P-Ticket</a>
             </div>
             <div class="navbar-center lg:flex list-none gap-12 cursor-pointer">
                 <li><a>Home</a></li>
-                  <li><a>About</a></li>
-                  <li><a>Destination</a></li>
-                  <li><a>Search</a></li>
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
+                <li><a>Search</a></li>
             </div>
             <div class="navbar-end">
-              <a class="btn border-green-600">Bus <img src="images/bus-icon.png" alt=""></a>
+                <a class="btn border-green-600">Bus <img src="images/bus-icon.png" alt=""></a>
             </div>
-          </div>
+        </div>
 
     </section>
-    <main class="w-[1171px] m-auto">
-        <section class="bg-[url(images/banner.png)] bg-no-repeat mt-8 h-[550px]">
-            <div class="text-center">
-                <h1 class="text-4xl font-extrabold text-white pt-24">End-to-End Travel with <br> <span class="text-green-700">P Paribahan</span></h1>
+    <main class="lg:w-[1171px] h-full m-auto">
 
-                <p class="text-white text-lg py-5">Yes, you can run unit tests and view the results directly within the app. The <br>integrated testing features allow for a streamlined .</p>
+        <div class="bg-[url(images/banner.png)] bg-no-repeat mt-8 w-full h-full  -bg-opacity-50">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold text-white pt-24">End-to-End Travel with <br> <span
+                        class="text-green-700">P Paribahan</span></h1>
+
+                <p class="text-white text-lg py-5 flex-wrap">Yes, you can run unit tests and view the results
+                    directly within the app. The <br>integrated testing features allow for a streamlined .</p>
 
                 <button class="btn bg-green-600 text-xl font-bold mb-32 border-none">Buy Ticket</button>
             </div>
-            <div class="flex gap-5 absolute justify-center -bottom-12 left-48">
-                <div class="w-[308px] h-28 bg-white flex items-center justify-center rounded-2xl border-b-4 border-green-600 gap-8">
+            <div
+                class="hidden lg:w-full lg:flex lg:-bottom-7 lg:justify-center lg:gap-4 lg:relative justify-around lg:left-0">
+                <div
+                    class="w-[308px] h-28 bg-white flex items-center justify-center rounded-2xl border-b-4 border-green-600 gap-8">
                     <img src="images/people.png" alt="">
                     <div>
                         <h1 class="text-4xl font-bold">500K+</h1>
@@ -44,7 +74,8 @@
                     </div>
 
                 </div>
-                <div class="w-[308px] h-28 bg-white flex items-center justify-center rounded-2xl border-b-4 border-green-600 gap-8">
+                <div
+                    class="w-[308px] h-28 bg-white flex items-center justify-center rounded-2xl border-b-4 border-green-600 gap-8">
                     <img src="images/ticket-cupon.png" alt="">
                     <div>
                         <h1 class="text-4xl font-bold">1.7 Lac</h1>
@@ -52,7 +83,8 @@
                     </div>
 
                 </div>
-                <div class="w-[308px] h-28 bg-white flex items-center justify-center rounded-2xl border-b-4 border-green-600 gap-8">
+                <div
+                    class="w-[308px] h-28 bg-white flex items-center justify-center rounded-2xl border-b-4 border-green-600 gap-8">
                     <img src="images/stoppage.png" alt="">
                     <div>
                         <h1 class="text-4xl font-bold">80K+</h1>
@@ -61,12 +93,75 @@
 
                 </div>
             </div>
-        </section>
 
-        <section>
+        </div>
 
+        <div class="lg:hidden flex-col items-center justify-center w-full mt-5">
+            <div class="h-28 bg-white flex items-center justify-center rounded-2xl border-b-4 border-green-600 gap-8">
+                <img src="images/people.png" alt="">
+                <div>
+                    <h1 class="text-4xl font-bold">500K+</h1>
+                    <p>Registered users</p>
+                </div>
+
+            </div>
+            <div class=" h-28 bg-white flex items-center justify-center rounded-2xl border-b-4 border-green-600 gap-8">
+                <img src="images/ticket-cupon.png" alt="">
+                <div>
+                    <h1 class="text-4xl font-bold">1.7 Lac</h1>
+                    <p>Ticket sold</p>
+                </div>
+
+            </div>
+            <div class="h-28 bg-white flex items-center justify-center rounded-2xl border-b-4 border-green-600 gap-8">
+                <img src="images/stoppage.png" alt="">
+                <div>
+                    <h1 class="text-4xl font-bold">80K+</h1>
+                    <p>rental partners</p>
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+
+        <!-- ----------------------Best offer section------------ -->
+        <section class="mt-10 lg:mt-20">
+            <h1 class="text-4xl font-semibold text-center">Best offer for you</h1>
+            <div class="lg:flex w-full lg:gap-5 lg:mt-8">
+                <div class="mt-8 lg:mt-0 bg-yellow-400 flex items-center rounded-2xl flex-1 justify-center">
+                    <div>
+                        <h1 class="text-4xl font-bold">15% OFF</h1>
+                        <p class="text-xl">on your next purchase</p>
+                        <P>use by January 2024</P>
+                    </div>
+                    <div>
+                        <img src="images/cupon-devider.png" alt="">
+                    </div>
+                    <div>
+                        <span class="text-2xl font-bold">NEW15</span>
+                        <p class="text-xl">Coupon code</p>
+                    </div>
+                </div>
+                <div class="bg-pink-500 flex items-center rounded-2xl flex-1 justify-center mt-2 lg:mt-0">
+                    <div>
+                        <h1 class="text-4xl font-bold">20% OFF</h1>
+                        <p class="text-xl">on your next purchase</p>
+                        <P>use by January 2024</P>
+                    </div>
+                    <div>
+                        <img src="images/cupon-devider.png" alt="">
+                    </div>
+                    <div>
+                        <span class="text-2xl font-bold">Couple 20</span>
+                        <p class="text-xl">Coupon code</p>
+                    </div>
+                </div>
+                <div></div>
+            </div>
         </section>
     </main>
-    
+
 </body>
+
 </html>
