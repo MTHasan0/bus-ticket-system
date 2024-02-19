@@ -1,18 +1,30 @@
 function handleSeatSelection(event) {
     const seat = event.target;
-
+    let countSeats = document.getElementById('totalSeat').textContent;
+    
 
     if (seat.classList.contains('selected')) {
+        
         seat.classList.remove('selected');
+        
 
 
     } else if (document.querySelectorAll('.selected').length < 4 && seat.tagName === 'BUTTON') {
+        
         seat.classList.add('selected');
+
+        
+        
+        
 
     }
 
     updateSelectedSeatsList();
     updateTotalPrice();
+    updateSeatsLeft();
+    updateSeatsSelected();
+
+    
 }
 
 function updateSelectedSeatsList() {
@@ -47,6 +59,7 @@ function updateTotalPrice() {
     const totalPrice = selectedSeatsCount * 550; // Per seat price is 550
     document.getElementById('totalPrice').textContent = totalPrice;
 }
+
 
 function couponCalculate(){
     const coupon15 = document.getElementById('coupon15').textContent.toLowerCase();
@@ -85,6 +98,19 @@ function couponCalculate(){
 }
 
 
+function updateSeatsLeft() {
+    const totalSeats = 40; // Assuming there are 40 seats in total
+    const selectedSeatsCount = document.querySelectorAll('.selected').length;
+    const seatsLeft = totalSeats - selectedSeatsCount;
+    document.getElementById('totalSeat').textContent =  `${seatsLeft}`;
+}
+
+function updateSeatsSelected() {
+    const total = 0; // Assuming there are 40 seats in total
+    const selectedSeatsCount = document.querySelectorAll('.selected').length;
+    const seatsAdded = total + selectedSeatsCount;
+    document.getElementById('seatCount').textContent =  `${seatsAdded}`;
+}
 
 
 
